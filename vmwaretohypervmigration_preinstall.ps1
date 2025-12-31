@@ -1,4 +1,4 @@
-﻿# VMware to Hyper-V Migration Prerequisites Installer
+# VMware to Hyper-V Migration Prerequisites Installer
 # Author: Amaury
 # Requires: Admin privileges
 
@@ -60,11 +60,11 @@ function Install-WAC {
 function Install-PowerCLI {
     Write-Host "Installing VMware PowerCLI..."
     Set-ExecutionPolicy RemoteSigned -Scope Process -Force
-    Install-Module -Name VMware.PowerCLI -Force -AllowClobber
+    Install-Module -Name VCF.PowerCLI -SkipPublisherCheck -AllowClobber
 }
 
 function Is-PowerCLIInstalled {
-    Get-Module -ListAvailable -Name VMware.PowerCLI
+    Get-Module -ListAvailable -Name VCF.PowerCLI
 }
 
 function Install-VDDK {
